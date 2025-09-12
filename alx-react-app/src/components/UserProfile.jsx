@@ -4,7 +4,7 @@ const UserProfile = (props) => {
   return (
     <div>
       <h2>{props.name}</h2>
-      <p>Email: {props.age}</p>
+      <p>Email: {props.Age}</p>
       <p>Bio: {props.bio}</p>
     </div>
   )

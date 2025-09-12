@@ -9,7 +9,7 @@ function App() {
       <Header />
       <MainContent />
       <Footer />
-      <UserProfile name="John Doe" email="25" bio="Software Developer" />
+      <UserProfile name="John Doe" Age="25" bio="Software Developer" />
     </>
   );
 }
