@@ -1,4 +1,4 @@
-import WelcomeMessage from './components/WelcomeMessage';
+import React from 'react';
 import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <MainContent />
+      
       <Footer />
       <UserProfile name="John Doe" Age="25" bio="Software Developer" />
     </>
