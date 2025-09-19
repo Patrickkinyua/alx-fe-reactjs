@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { fetchUserData } from "../services/githubService.js";
 
-function Search() {
+export default function Search() {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -9,14 +9,15 @@ function Search() {
 
   const handleSearch = async (e) => {
     e.preventDefault();
+    if (!username.trim()) return;
     setLoading(true);
     setError("");
     setUser(null);
 
     try {
-      const data = await fetchUserData(username);
+      const data = await fetchUserData(username.trim());
       setUser(data);
-    } catch {
+    } catch (err) {
       setError("Looks like we can’t find the user");
     } finally {
       setLoading(false);
@@ -59,5 +60,3 @@ function Search() {
     </div>
   );
 }
-
-export default Search;
